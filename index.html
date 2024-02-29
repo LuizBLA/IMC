@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>IMC</h1>
+
+    <label for="altura" class="for">Altura</label>
+    <input type="number" name="" id="altura" class="one">
+    <br>
+
+    <label for="peso" class="fo">Peso</label>
+    <input type="number" name="" id="peso" class="two">
+    <br>
+
+    <button onclick="calcular()">
+        Clique aqui para calcular
+    </button>
+
+    <p>Seu índice de massa corporal é: 
+        <span id="resultado"></span>
+    </p>
+
+    <script>
+        function calcular() {
+            const altura = document.getElementById('altura').value;
+            const peso = document.getElementById('peso').value;
+            const imc = peso / (altura ** 2);
+            document.getElementById('resultado').textContent = imc.toFixed(3);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
